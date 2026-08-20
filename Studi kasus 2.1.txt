@@ -1,0 +1,28 @@
+//Latihan studi kasus 2.1
+#include <iostream>
+using namespace std;
+
+int main() {
+    // 1. INPUT: Deklarasi variabel
+    int panjang, lebar, luas;
+
+    // 2. PROSES SEKUENSIAL: Meminta input secara berurutan
+    cout << "=== PROGRAM PENGHITUNG LUAS LAPANGAN ===" << endl;
+    
+    cout << "Masukkan nilai panjang (meter) : ";
+    cin >> panjang;
+    
+    cout << "Masukkan nilai lebar (meter)   : ";
+    cin >> lebar;
+
+    // 3. PROSES HITUNG: Menjalankan operasi matematika
+    luas = panjang * lebar;
+
+    // 4. OUTPUT: Menampilkan hasil akhir
+    cout << "----------------------------------------" << endl;
+    cout << "Luas lapangan olahraga adalah  : " << luas << " meter persegi" << endl;
+    
+    return 0; // Mengakhiri algoritma dengan baik
+}
+
+
