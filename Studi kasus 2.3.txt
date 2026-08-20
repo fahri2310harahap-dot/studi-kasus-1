@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int pilihan_studio;
+    int umur;
+    
+    cout << "=== SISTEM TIKET BIOSKOP CERDAS ===" << endl;
+    cout << "Pilih Tipe Studio:" << endl;
+    cout << "1. Studio Reguler (Rp 40.000)" << endl;
+    cout << "2. Studio VIP     (Rp 100.000)" << endl;
+    cout << "Masukkan pilihan (1/2): ";
+    cin >> pilihan_studio;
+    
+    cout << "Masukkan umur Anda (Tahun): ";
+    cin >> umur;
+    
+    cout << "\n--- TIKET ANDA ---" << endl;
+    
+    // 1. Menggunakan Switch-Case untuk Menu Studio
+    switch (pilihan_studio) {
+        case 1:
+            cout << "Tipe Studio  : REGULER" << endl;
+            break;
+        case 2:
+            cout << "Tipe Studio  : VIP" << endl;
+            break;
+        default:
+            cout << "Tipe Studio  : TIDAK VALID!" << endl;
+            // Jika studio salah, kita hentikan program lebih awal
+            return 0; 
+    }
+    
+    // 2. Menggunakan If - Else If untuk Kategori Umur
+    if (umur > 0 && umur < 13) {
+        cout << "Kategori     : ANAK-ANAK" << endl;
+        cout << "Peringatan   : Hanya boleh menonton film dengan rating SU (Semua Umur)." << endl;
+    } 
+    else if (umur >= 13 && umur < 18) {
+        cout << "Kategori     : REMAJA" << endl;
+        cout << "Peringatan   : Boleh menonton film rating SU dan R13+." << endl;
+    } 
+    else if (umur >= 18) {
+        cout << "Kategori     : DEWASA" << endl;
+        cout << "Peringatan   : Bebas menonton semua rating film." << endl;
+    } 
+    else {
+        cout << "Kategori     : UMUR TIDAK MASUK AKAL!" << endl;
+    }
+
+    cout << "===================================" << endl;
+    cout << "Selamat Menonton!" << endl;
+    
+    return 0;
+}
+
+
